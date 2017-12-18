@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">渗透测试</string>
+    <string name="user">请输入邮箱</string>
+    <string name="pwd">请输入密码</string>
+    <string name="login">登录</string>
+    <string name="xiaobiao">iu才是韩国妹子</string>
+    <string name="title_activity_qcode">Qcode</string>
+</resources>

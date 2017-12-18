@@ -1,0 +1,32 @@
+$def with(status)
+$if not status:
+    $ log=u'登陆'
+$else:
+    $ log=u'退出'
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>渗透测试</title>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+		<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+	<div class="navbar-header">
+		<a class="navbar-brand " href="/index">Demo</a>
+	</div>
+	<div>
+		<ul class="nav navbar-nav">
+			<li><a href="/scrack">弱口令</a></li>
+			<li><a href="/xss">XSS</a></li>
+			<li><a href="/csql">SQL注入</a></li>
+			<li><a href="/xssindex">XSS平台</a></li>
+		</ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span>$log</a></li>
+        </ul>
+	</div>
+	</div>
+</nav>
+</html>

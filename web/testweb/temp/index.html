@@ -1,0 +1,10 @@
+$def with(data)
+<html>
+<meta charset="utf-8">
+<head>XSS测试</head>
+<form  action="/index" method="post">
+<input type="text" name="name" >
+<input type="submit" value="测试">
+</form>
+    <p>$:data</p>
+</html>

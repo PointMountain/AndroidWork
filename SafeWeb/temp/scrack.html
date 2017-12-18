@@ -1,0 +1,30 @@
+$def with(index,ls)
+	$:index
+    <head>
+	<meta charset="utf-8">
+	<title>结果</title>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<div class="ui-corner-all">
+    <div align="container">
+			<table class="table table-striped table-hover">
+				<tr>
+					<th>ID</th>
+					<th>ip地址</th>
+					<th>端口</th>
+					<th>用户名</th>
+					<th>密码</th>
+				</tr>
+				$for i in ls:
+				<tr>
+					<td>$ls.index(i)</td>
+					<td>$i[1]</td>
+					<td>$i[2]</td>
+					<td>$i[3].split('&')[0]</td>
+					<td>$i[3].split('&')[1]</td>
+				</tr>
+			</table>
+    </div>
+	</div>

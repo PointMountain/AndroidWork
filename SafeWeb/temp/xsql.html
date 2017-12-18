@@ -1,0 +1,27 @@
+$def with(index,ls)
+	$:index
+    <head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            .main{width:700px;height:400px;position:absolute;top:50%;left:50%;margin-top:-250px;margin-left:-350px}
+	        .main-panel{margin-top:80px}
+        </style>
+	</head>
+	<div class="main">
+    <div align="container">
+			<table class="table table-striped table-hover">
+				<tr>
+					<th>ID</th>
+					<th>URL</th>
+				</tr>
+				$for i in ls:
+				<tr>
+					<td>$ls.index(i)</td>
+					<td>$i[2]</td>
+				</tr>
+			</table>
+    </div>
+	</div>

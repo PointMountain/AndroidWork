@@ -1,0 +1,56 @@
+$def with(index,curl,result)
+    $:index
+	<head>
+		<meta charset="UTF-8">
+		<title>查询</title>
+		<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+	body,html{width:100%;height:100%;}
+	.main{width:700px;height:400px;position:absolute;top:50%;left:50%;margin-top:-250px;margin-left:-350px}
+	.main-panel{margin-top:80px}
+	.text-wrap{width:500px;min-height:100px;margin:30px auto;padding:20px 0;position:relative;clear:both;font-family:	SimHei,serif;font-size:50px;text-align:center;color:#5CB85C;font-weight:600}
+	#footer nav{background-color:#dedede}
+	</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="row">
+			<div class="col-md-12">
+			<div class="text-wrap">
+				请输入IP或URL
+			</div>
+			</div>
+			</div>
+		<div class="row">
+		<div class="col-lg-12">
+            <form action="/index" method="post">
+			<div class="input-group input-group-lg">
+				<input type="text" name="url"  value="$curl" class="form-control" aria-label="..." >
+				<div class="input-group-btn">
+					<button type="submit" name="crack" class="btn btn-success btn-lg search-btn" aria-haspopup="true" aria-expanded="false"><b>检测</b></button>
+				</div>
+			</div>
+            </form>
+		</div>
+		<div class="row main-panel">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-10">
+				<div id="color" class="panel panel-success">
+					<div class="panel-heading" id="ti">
+						提示
+					</div>
+					<div class="panel-body" id="re" style="word-wrap:break-word; word-break:break-all;display:block">
+						$if result==None:
+							支持FTP、Mysql、Mssql弱口令检测，支持XSS、SQL注入检测
+						$else :$for i in result: $i:$result[i]<br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		</div>
+	</body>

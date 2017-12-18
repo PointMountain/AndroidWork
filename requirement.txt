@@ -1,0 +1,8 @@
+web.py
+requests
+BeautifulSoup
+bs4
+pymssql
+paramiko
+qrcode
+apscheduler
